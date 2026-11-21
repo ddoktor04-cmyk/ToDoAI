@@ -66,12 +66,20 @@ export function AppHeader({ onCreate }: AppHeaderProps) {
         <Stack direction="row" spacing={1} sx={{ ml: 'auto' }}>
           <ThemeToggle />
           <Button
-            variant="outlined"
+            variant="contained"
             startIcon={<AddIcon />}
             onClick={onCreate}
-            sx={{ whiteSpace: 'nowrap' }}
+            sx={{
+              whiteSpace: 'nowrap',
+              bgcolor: '#B7FF00',
+              color: '#0f1419',
+              fontWeight: 700,
+              textTransform: 'none',
+              '&:hover': { bgcolor: '#9AE000', color: '#0f1419' },
+              '&:active': { bgcolor: '#8ACC00' },
+            }}
           >
-            Add task
+            New task
           </Button>
         </Stack>
       </Toolbar>
